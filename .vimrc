@@ -209,6 +209,10 @@ nnoremap <Leader>w :w<CR>
 " Quit
 nnoremap <Leader>q :q<CR>
 
+" New tab
+nnoremap <Leader>t :tabnew<CR>
+
+
 "=================Plugins Settings==================
 
 " fzf
