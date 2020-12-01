@@ -16,6 +16,7 @@ Plug 'tomtom/tcomment_vim'
 Plug 'Yggdroot/indentLine'
 Plug 'jiangmiao/auto-pairs'
 Plug 'sheerun/vim-polyglot'
+Plug 'ryanoasis/vim-devicons'
 
 "Git support
 Plug 'airblade/vim-gitgutter'
@@ -200,6 +201,8 @@ set scrolloff=3
 set title
 
 set clipboard+=unnamed
+
+let g:airline_powerline_fonts = 1
 
 "=================Key Mappings======================
 
