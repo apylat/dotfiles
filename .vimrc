@@ -241,11 +241,16 @@ nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
 "nnoremap <silent> <c-\> :TmuxNavigatePrevious<cr>
 
 " Ale settings
-let b:ale_fixers = {'javascript': ['prettier', 'eslint']}
-let g:ale_fix_on_save = 1
+let b:ale_fixers = {
+      \ 'javascript': ['prettier', 'eslint'],
+      \ 'ruby': ['rubocop']
+      \ }
+let g:ale_fix_on_save = 'never'
 let g:ale_completion_enabled = 1
+" let g:ale_linters_explicit = 1
+" let g:ale_sign_column_always = 1
 
-" Lightlene settings
+" Lightline settings
 let g:lightline = {
       \ 'component_function': {
       \   'filename': 'LightlineFilename',
