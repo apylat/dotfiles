@@ -18,7 +18,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'sheerun/vim-polyglot'
 Plug 'ryanoasis/vim-devicons'
 
-"Git support
+" Git support
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 
