@@ -44,3 +44,5 @@ vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
 vim.keymap.set("n", "<Leader>w", ":w<CR>")
 vim.keymap.set("n", "<Leader>q", ":q<CR>")
 vim.keymap.set("n", "<Leader>t", ":tabnew<CR>")
+
+vim.api.nvim_command('autocmd CursorHold * lua vim.diagnostic.open_float(nil, {focusable = false})')
