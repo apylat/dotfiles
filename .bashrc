@@ -134,4 +134,6 @@ export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 export PATH="$PATH:$(npm bin -g)"
 . <(asdf completion bash)
 
+export EDITOR="$VISUAL"
+
 alias crm_app='cd ~/Projects/crm_app && tmux'
