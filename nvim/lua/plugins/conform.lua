@@ -15,9 +15,10 @@ return {
 				yaml = { "prettier" },
 				markdown = { "prettier" },
 				lua = { "stylua" },
+				ruby = { "rubocop" },
 			},
 			format_on_save = {
-				timeout_ms = 1000,
+				timeout_ms = 2000,
 				lsp_fallback = true,
 			},
 		},
@@ -28,7 +29,7 @@ return {
 				require("conform").format({
 					async = false,
 					lsp_fallback = true,
-					timeout_ms = 1000,
+					timeout_ms = 2000,
 				})
 			end, { desc = "Format file or range" })
 
@@ -39,7 +40,7 @@ return {
 						require("conform").format({
 							async = false,
 							lsp_fallback = true,
-							timeout_ms = 1000,
+							timeout_ms = 2000,
 						})
 					end, { buffer = args.buf, desc = "Format buffer" })
 				end,

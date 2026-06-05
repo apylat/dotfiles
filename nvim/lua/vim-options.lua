@@ -34,24 +34,24 @@ vim.g.background = "light"
 vim.opt.swapfile = false
 
 -- Navigate vim panes better
-vim.keymap.set('n', '<c-k>', ':wincmd k<CR>')
-vim.keymap.set('n', '<c-j>', ':wincmd j<CR>')
-vim.keymap.set('n', '<c-h>', ':wincmd h<CR>')
-vim.keymap.set('n', '<c-l>', ':wincmd l<CR>')
+vim.keymap.set("n", "<c-k>", ":wincmd k<CR>")
+vim.keymap.set("n", "<c-j>", ":wincmd j<CR>")
+vim.keymap.set("n", "<c-h>", ":wincmd h<CR>")
+vim.keymap.set("n", "<c-l>", ":wincmd l<CR>")
 
-vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
+vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>")
 
 vim.keymap.set("n", "<Leader>w", ":w<CR>")
 vim.keymap.set("n", "<Leader>q", ":q<CR>")
 vim.keymap.set("n", "<Leader>t", ":tabnew<CR>")
 
-vim.api.nvim_command('autocmd CursorHold * lua vim.diagnostic.open_float(nil, {focusable = false})')
+vim.api.nvim_command("autocmd CursorHold * lua vim.diagnostic.open_float(nil, {focusable = false})")
 
 vim.api.nvim_create_autocmd("BufWritePre", {
-  pattern = "*",
-  callback = function()
-    local pos = vim.api.nvim_win_get_cursor(0)
-    vim.cmd([[%s/\s\+$//e]])
-    vim.api.nvim_win_set_cursor(0, pos)
-  end,
+	pattern = "*",
+	callback = function()
+		local pos = vim.api.nvim_win_get_cursor(0)
+		vim.cmd([[%s/\s\+$//e]])
+		vim.api.nvim_win_set_cursor(0, pos)
+	end,
 })
